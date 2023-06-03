@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
                 val result =
                     bufferedReader.readLine()             // чтение строки из буферизированного потока ввода
                 Log.d("MainActivity", "Result: $result")
+                val dogImage = DogImage(result, "success")
 
             } catch (e: Exception) {
                 Log.d("MainActivity", "Error: $e")
