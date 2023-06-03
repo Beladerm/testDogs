@@ -1,0 +1,32 @@
+
+*.iml
+# Android
+*.apk
+*.ap_
+*.dex
+*.obb
+*.so
+*.aar
+
+# Gradle
+.gradle/
+/build/
+
+# IntelliJ IDEA / Android Studio
+.idea
+
+# ProGuard files
+proguard/
+proguard-*.txt
+
+# Android Studio generated files
+captures/
+.externalNativeBuild/
+cxx/
+
+# Crashlytics and Fabric configuration files
+crashlytics.properties
+fabric.properties
+
+# Keystore files
+*.jks
