@@ -1,6 +1,7 @@
 package com.example.testdogs
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
@@ -32,6 +33,11 @@ class MainActivity : AppCompatActivity() {
                 android.view.View.GONE
             }
         }
+        viewModel?.getIsNetworkError()?.observe(this) {
+             if (it) {
+                Toast.makeText(this, getString(R.string.network_error), Toast.LENGTH_SHORT).show()
+            }
+        }
         binding.button.setOnClickListener { viewModel?.loadImage() }
 
     }
@@ -39,9 +45,9 @@ class MainActivity : AppCompatActivity() {
 }
 
 object Constants {
-    const val DOGE_URL = "https://dog.ceo/api/breeds/image/random"
-    const val KEY_MESSAGE = "message"
-    const val KEY_STATUS = "status"
+    const val DOGE_URL = "https://dog.ceo/api/"
+//    const val KEY_MESSAGE = "message"
+  //  const val KEY_STATUS = "status"
     const val TAG = "MainActivity"
 }
 
